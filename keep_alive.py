@@ -5,12 +5,12 @@ app = Flask('')
 
 @app.route('/')
 def home():
-    return "Bot YouTube Finder 24/7 is Online!"
+    return "Bot is running!"
 
 def run():
+    # Render yêu cầu port 8080 mặc định cho Web Service
     app.run(host='0.0.0.0', port=8080)
 
 def keep_alive():
     t = Thread(target=run)
-    t.daemon = True
     t.start()
